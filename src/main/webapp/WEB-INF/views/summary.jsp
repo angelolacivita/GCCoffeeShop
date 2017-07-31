@@ -26,5 +26,8 @@
 <body>
 Hello
 ${firstName}
+
+Added you to the database!
+${newStuff}
 </body>
 </html>

@@ -26,7 +26,7 @@
     <h1>Please fill in the form to register!</h1>
 </head>
 <body>
-<form method="post" action="/summary">
+<form method="post" action="/registerUser">
 
     <form action="/action_page_post.php" method="post">
 
@@ -49,7 +49,7 @@
         <br>
             <input type="radio" name="gender" value="male"> Male<br>
             <input type="radio" name="gender" value="female"> Female<br>
-            <input type="radio" name="gender" value="other"> Other
+            <input type="radio" name="gender" value="other" checked> Other
             <br>
             <br>
         Would you like to be on our mailing list?
