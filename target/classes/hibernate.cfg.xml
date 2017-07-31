@@ -10,11 +10,14 @@
     <property name="show_sql">true</property>
 
     <property name="connection.username">root</property>
-    <property name="connection.password">spartacus</property>
+    <property name="connection.password">Userpass123#</property>
 
     <mapping class="com.test.models.UsersEntity"/>
       <mapping resource="UsersEntity.hbm.xml"/>
-      <!-- <property name="connection.username"/> -->
+    <mapping class="com.test.models.ItemsEntity"/>
+      <mapping resource="ItemsEntity.hbm.xml"/>
+
+    <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->

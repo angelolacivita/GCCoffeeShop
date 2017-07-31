@@ -4,6 +4,7 @@ package com.test.controller;
  * Created by angelo on 7/21/17.
  */
 
+import com.test.models.ItemsEntity;
 import com.test.models.UsersEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
+
+import java.util.ArrayList;
 
 @Controller
 public class HomeController {
@@ -22,6 +25,12 @@ public class HomeController {
     public String registration() {
 
         return "registration";
+    }
+    @RequestMapping("/items")
+    //the String method returns the jsp page that we want to show
+    public String items() {
+
+        return "items";
     }
 
     //model is a parameter that allows us to add things to our jsp
@@ -59,6 +68,22 @@ public class HomeController {
 
         model.addAttribute("newStuff", newUser);
         return "summary";
+    }
+    @RequestMapping("/listItems")
+    public ModelAndView listItems() {
+        ArrayList<ItemsEntity> itemsList = getAllItems();
+        return new
+                ModelAndView("items", "cList", itemsList);
+
+    }
+    //this method was extracted to be used again, regular method and not a controller
+    private ArrayList<ItemsEntity> getAllItems() {
+        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+        SessionFactory sessionFact = cfg.buildSessionFactory();
+        Session selectItems = sessionFact.openSession();
+        selectItems.beginTransaction();
+        Criteria c = selectItems.createCriteria(ItemsEntity.class);
+        return (ArrayList<ItemsEntity>) c.list();
     }
     @RequestMapping("/")
 

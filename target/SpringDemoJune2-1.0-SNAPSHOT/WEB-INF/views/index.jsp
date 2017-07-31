@@ -29,6 +29,10 @@
 
 <p>Welcome to GC COFFEE!
     <br>
-    <a href ="registration">Register</a></p>
+    <a href ="registration">Register</a>
+    <br>
+    <a href ="/listItems">GC Coffee Menu</a>
+</p>
+
 </body>
 </html>

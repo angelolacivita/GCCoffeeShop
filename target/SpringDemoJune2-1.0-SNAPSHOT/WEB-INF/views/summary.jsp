@@ -20,14 +20,15 @@
             color: chartreuse;
             background-color: firebrick;
         }
-
+        h1{
+            font: bold 50px Gill Sans, serif;
+            color: chartreuse;
+            background-color: firebrick;
+        }
     </style>
 </head>
 <body>
-Hello
-${firstName}
-
-Added you to the database!
+<h1>Added you to the database!</h1>
 ${newStuff}
 </body>
 </html>
