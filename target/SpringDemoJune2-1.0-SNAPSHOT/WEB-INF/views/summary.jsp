@@ -12,18 +12,18 @@
     <style>
         p{
             font: bold 25px Gill Sans, serif;
-            color: chartreuse;
-            background-color: firebrick;
+            color: darkorange;
+            background-color: deepskyblue;
         }
         body{
             font: bold 25px Gill Sans, serif;
-            color: chartreuse;
-            background-color: firebrick;
+            color: darkorange;
+            background-color: deepskyblue;
         }
         h1{
             font: bold 50px Gill Sans, serif;
-            color: chartreuse;
-            background-color: firebrick;
+            color: darkorange;
+            background-color: deepskyblue;
         }
     </style>
 </head>

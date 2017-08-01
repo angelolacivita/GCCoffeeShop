@@ -152,11 +152,25 @@ public class HomeController {
     }
 
     private int itemid;
-@RequestMapping("/updateItem")
-public String update(int itemid){
+
+    @RequestMapping("/updateItem")
+    public String update(int itemid, Model model) {
         this.itemid = itemid;
+
+        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+        SessionFactory sessionFact = cfg.buildSessionFactory();
+        Session s = sessionFact.openSession();
+        s.beginTransaction();
+
+        ItemsEntity temp = (ItemsEntity) s.get(ItemsEntity.class, itemid);
+
+        model.addAttribute("itemName",temp.getName());
+        model.addAttribute("itemDescription", temp.getDescription());
+        model.addAttribute("itemPrice",temp.getPrice());
+        model.addAttribute("itemQuantity",temp.getQuantity());
+
         return "itemeditor";
-}
+    }
 
     @RequestMapping("/editItem")
     public String editItem(Model model,

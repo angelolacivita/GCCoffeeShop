@@ -10,10 +10,43 @@
 <html>
 <head>
     <title>GC Coffee</title>
+    <style>
+        p{
+            color: darkorange;
+            font-size: xx-large;
+            background-color: lightskyblue;
+            text-align: center;
+            font: bold 50px Gill Sans, serif;
+            padding: 130px;
+        }
+        body{
+            color: darkorange;
+            background-color: lightskyblue;
+            font-size: large;
+            font: bold 25px Gill Sans, serif;
+            text-align: center;
+        }
+        table{
+            color: darkorange;
+            background-color: lightskyblue;
+            font-size: large;
+            font: bold 25px Gill Sans, serif;
+            text-align: center;
+
+        }
+
+    </style>
 </head>
 <body>
-<table border=1>
-    <h3>Item____Desc____Qty_Price</h3>
+<table border=1 align="center">
+    <tr>
+        <td>Item</td>
+        <td>Description</td>
+        <td>Quantity</td>
+        <td>Price</td>
+    </tr>
+</table>
+<table border=1 align="center">
     <c:forEach var="myvar" items="${cList}">
         <tr>
             <td> ${myvar.name}</td>
@@ -21,10 +54,10 @@
             <td> ${myvar.quantity}</td>
             <td> ${myvar.price}</td>
             <td>
-                <a href = "delete?itemid=${myvar.itemid}">Delete</a>
+                <a href = "/updateItem?itemid=${myvar.itemid}">Edit</a>
             </td>
             <td>
-                <a href = "/updateItem?itemid=${myvar.itemid}">Edit</a>
+                <a href = "delete?itemid=${myvar.itemid}">Delete</a>
             </td>
         </tr>
     </c:forEach>

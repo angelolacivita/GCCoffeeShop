@@ -11,16 +11,16 @@
     <title>GC Coffee</title>
 <style>
     p{
-        color: chartreuse;
+        color: darkorange;
         font-size: xx-large;
-        background-color: firebrick;
+        background-color: lightskyblue;
         text-align: center;
         font: bold 50px Gill Sans, serif;
         padding: 130px;
     }
     body{
-        color: chartreuse;
-        background-color: firebrick;
+        color: darkorange;
+        background-color: lightskyblue;
     }
 
 </style>

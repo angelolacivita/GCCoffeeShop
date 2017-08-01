@@ -12,14 +12,14 @@
     <style>
         h1 {
             font: bold 50px Gill Sans, serif;
-            color: chartreuse;
-            background-color: firebrick;
+            color: darkorange;
+            background-color: lightskyblue;
         }
 
         body {
             font: bold 25px Gill Sans, serif;
-            color: chartreuse;
-            background-color: firebrick;
+            color: darkorange;
+            background-color: lightskyblue;
         }
 
     </style>

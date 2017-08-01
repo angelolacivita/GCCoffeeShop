@@ -9,6 +9,22 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        p{
+            color: darkorange;
+            font-size: xx-large;
+            background-color: lightskyblue;
+            text-align: center;
+            font: bold 50px Gill Sans, serif;
+            padding: 130px;
+        }
+        body{
+            color: darkorange;
+            background-color: lightskyblue;
+            font: bold 25px Gill Sans, serif;
+        }
+
+    </style>
 </head>
 <body>
 <form method="post" action="/editItem">
@@ -17,19 +33,19 @@
     <br>
     <br>
     Item Name:
-    <input type="text" name="name" value="" required>
+    <input type="text" name="name" value="${itemName}" required>
     <br>
     <br>
     Item Description:
-    <input type="text" name="description" value="" required>
+    <input type="text" name="description" value="${itemDescription}" required>
     <br>
     <br>
     Item Quantity:
-    <input type="text" name="quantity" value="" required>
+    <input type="text" name="quantity" value="${itemQuantity}" required>
     <br>
     <br>
     Item Price:
-    <input type="text" name="price" value="" required>
+    <input type="text" name="price" value="${itemPrice}" required>
     <br>
     <br>
     <input type="submit" value="Edit Item">
