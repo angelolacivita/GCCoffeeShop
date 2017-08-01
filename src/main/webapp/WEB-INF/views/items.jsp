@@ -20,9 +20,15 @@
             <td> ${myvar.description}</td>
             <td> ${myvar.quantity}</td>
             <td> ${myvar.price}</td>
-
+            <td>
+                <a href = "delete?itemid=${myvar.itemid}">Delete</a>
+            </td>
+            <td>
+                <a href = "/updateItem?itemid=${myvar.itemid}">Edit</a>
+            </td>
         </tr>
     </c:forEach>
 </table>
+<a href = "additem">Add an Item</a>
 </body>
 </html>

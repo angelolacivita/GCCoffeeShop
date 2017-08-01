@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>validate_password_policy=LOW
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
     <title>GC Coffee</title>
@@ -20,9 +20,15 @@
             <td> ${myvar.description}</td>
             <td> ${myvar.quantity}</td>
             <td> ${myvar.price}</td>
-
+            <td>
+                <a href = "delete?itemid=${myvar.itemid}">Delete</a>
+            </td>
+            <td>
+                <a href = "/updateItem?itemid=${myvar.itemid}">Edit</a>
+            </td>
         </tr>
     </c:forEach>
 </table>
+<a href = "additem">Add an Item</a>
 </body>
 </html>

@@ -45,6 +45,7 @@
         Password:
         <input type="password" name="password" value="password" required>
         <br>
+        <br>
         Gender:
         <br>
             <input type="radio" name="gender" value="male"> Male<br>
@@ -63,7 +64,7 @@
         <br>
         What are your coffee preferences?
         <br>
-        <input type="checkbox" name="preferences" value="coffee"> Coffee<br>
+        <input type="checkbox" name="preferences" value="coffee" checked> Coffee<br>
         <input type="checkbox" name="preferences" value="latte">Latte<br>
         <input type="checkbox" name="preferences" value="espresso">Esspresso<br>
         <input type="checkbox" name="preferences" value="cappuccino">Cappuccino<br>
